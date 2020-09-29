@@ -1,0 +1,13 @@
+@import url(./button_active.css);
+
+.button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  color: white;
+  cursor: default;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+}

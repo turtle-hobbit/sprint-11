@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -28,7 +28,7 @@
     </div>
     <div class="popup" id="popupAddCard">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close" id="popupAddCardClose">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close" id="popupAddCardClose">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new">
             <input id="name" type="text" name="name" class="popup__input popup__input_type_name" minlength="2" maxlength="30" required placeholder="Название">
@@ -41,7 +41,7 @@
     </div>
     <div class="popup" id="popupEdit">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close" id="popupEditClose">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close" id="popupEditClose">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="edit">
             <input id="username" type="text" name="username" class="popup__input popup__input_type_username" minlength="2" maxlength="30" required placeholder="Имя">
@@ -55,20 +55,10 @@
     <div class="popup" id="popupImage">
       <div class="popup__content-image">
         <img src="" alt="" class="popup__image">
-        <img src="./images/close.svg" alt="" class="popup__close" id="popupImageClose">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close" id="popupImageClose">
       </div>
     </div>
   </div>
-  <script src="./js/Api.js"></script>
-  <script src="./js/data.js"></script>
-  <script src="./js/Card.js"></script>
-  <script src="./js/CardList.js"></script>
-  <script src="./js/Popup.js"></script>
-  <script src="./js/ImagePopup.js"></script>
-  <script src="./js/AddCardPopup.js"></script>
-  <script src="./js/EditPopup.js"></script>
-  <script src="./js/UserInfo.js"></script>
-  <script src="./js/FormValidator.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="<%=htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

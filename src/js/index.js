@@ -1,3 +1,14 @@
+import errorMessages from './data.js';
+import AddCardPopup from './AddCardPopup.js';
+import Api from './Api.js';
+import Card from './Card.js';
+import CardList from './CardList.js';
+import EditPopup from './EditPopup.js';
+import FormValidator from './FormValidator.js';
+import ImagePopup from './ImagePopup.js';
+import UserInfo from './UserInfo.js';
+import '../pages/index.css';
+
 (function () {
   'use strict';
 

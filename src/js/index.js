@@ -34,9 +34,10 @@ import '../pages/index.css';
   const closeImageButton = popupImage.querySelector('#popupImageClose');
   const openImage = popupImage.querySelector('.popup__image');
 
+  const serverUrl = NODE_ENV === 'development' ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12';
 
   const api = new Api({
-    url: 'https://nomoreparties.co/cohort12',
+    url: serverUrl,
     headers: {
       'Content-Type': 'application/json',
       authorization: '06ab31b3-7e13-49b3-85d4-2d4d84ad2dae'

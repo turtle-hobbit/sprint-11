@@ -14,15 +14,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { 
+            {
                 test: /\.js$/,
-                use: { loader: "babel-loader" }, 
+                use: { loader: "babel-loader" },
                 exclude: /node_modules/
             },
             {
                 test: /\.css$/,
                 use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 
+                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     {
                         loader: 'css-loader',
                         options: { importLoaders: 2 }
@@ -51,13 +51,13 @@ module.exports = {
             }
         ]
     },
-    plugins: [ 
-        new MiniCssExtractPlugin({filename: 'style.[contenthash].css'}),
+    plugins: [
+        new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
             cssProcessorPluginOptions: {
-                    preset: ['default'],
+                preset: ['default'],
             },
             canPrint: true
         }),

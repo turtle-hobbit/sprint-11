@@ -1,3 +1,14 @@
+import errorMessages from './data.js';
+import AddCardPopup from './AddCardPopup.js';
+import Api from './Api.js';
+import Card from './Card.js';
+import CardList from './CardList.js';
+import EditPopup from './EditPopup.js';
+import FormValidator from './FormValidator.js';
+import ImagePopup from './ImagePopup.js';
+import UserInfo from './UserInfo.js';
+import '../pages/index.css';
+
 (function () {
   'use strict';
 
@@ -23,9 +34,10 @@
   const closeImageButton = popupImage.querySelector('#popupImageClose');
   const openImage = popupImage.querySelector('.popup__image');
 
+  const serverUrl = NODE_ENV === 'development' ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12';
 
   const api = new Api({
-    url: 'https://nomoreparties.co/cohort12',
+    url: serverUrl,
     headers: {
       'Content-Type': 'application/json',
       authorization: '06ab31b3-7e13-49b3-85d4-2d4d84ad2dae'
